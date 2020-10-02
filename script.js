@@ -9,40 +9,31 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// Alert to select which criteria to include in the password
-
-// Prompt for the length of the password
-// Confirm THEN I choose a length of at least 8 characters and no more than 128 characters
-
-// Prompt for character types to include in the password
-// Confirm choose lowercase, uppercase, numeric, and/or special characters
-
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-
-// WHEN all prompts are answered
-
 // Used w3schools to help write this section.
 
 var userName = prompt('Would you like a new password?');
+
+// Alert to select which criteria to include in the password
+
 var newpassword = prompt(
-  'I understand my password can be from 8-128 characters long including letters (both lowercase and uppercase), numbers and/or symbols.'
+  'Acknowledge that you understand your password can be from 8-128 characters long including letters (both lowercase and uppercase), numbers and/or symbols.'
 );
 var acknowledge = confirm('Thank you!');
 
-var userName = prompt('Pick the amount of characters from in your password.');
-var confirmnumbers = confirm('Good choice!');
+// Prompt for the amount of charcters in the password.
 
-if (confirmnumbers == null || password == '') {
-  txt = 'User cancelled the prompt.';
+var userName = prompt('Pick the amount of characters in your password.');
+var confirmcharacters = confirm('Good choice!');
+
+if (confirmcharacters) {
+  txt = 'Good choice!';
 } else {
-  txt =
-    'Try again' +
-    confirmnumbers +
-    'Please enter the amount of characters in your new password';
+  txt = 'Try again';
 }
 
-var userName = prompt('Pick the amount of letters from in your password.');
+// Prompt for the amount of letters in the password.
+
+var userName = prompt('Pick the amount of letters in your password.');
 var confirmletters = confirm('Good choice!');
 
 if (confirmletters == null || password == '') {
@@ -54,7 +45,9 @@ if (confirmletters == null || password == '') {
     'Please enter the amount of numbers in your new password';
 }
 
-var userName = prompt('Pick the amount of numbers from in your password.');
+// Prompt for the amount of letters in the password.
+
+var userName = prompt('Pick the amount of numbers in your password.');
 var confirmnumbers = confirm('Good choice!');
 
 if (confirmnumbers == null || password == '') {
@@ -66,7 +59,9 @@ if (confirmnumbers == null || password == '') {
     'Please enter the amount of numbers in your new password';
 }
 
-var userName = prompt('Pick the amount of symbols from in your new password.');
+// Prompt for the amount of symbols in the password.
+
+var userName = prompt('Pick the amount of symbols in your new password.');
 var confirmsymbols = confirm('Good choice!');
 
 if (confirmsymbols == null || password == '') {
