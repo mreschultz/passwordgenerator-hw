@@ -9,73 +9,44 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// Used w3schools to help write this section.
+// Used w3schools.com to help write this section.
 
-var userName = prompt('Would you like a new password?');
+var userName = prompt('Do you need a new, secure password?');
 
 // Alert to select which criteria to include in the password
 
 var newpassword = prompt(
-  'Acknowledge that you understand your password can be from 8-128 characters long including letters (both lowercase and uppercase), numbers and/or symbols.'
+  'The criteria for your new password is it must be between 8-128 characters and include: letters (both lowercase and uppercase), numbers and/or symbols. Type okay to acknowledge.'
 );
-var acknowledge = confirm('Thank you!');
+var acknowledge = confirm('Acknowledged!');
 
-// Prompt for the amount of charcters in the password.
+// Prompt for the amount of characters in the password.
 
-var userName = prompt('Pick the amount of characters in your password.');
+var userName = prompt(
+  'Pick the length of password between 8-128 characters long.'
+);
 var confirmcharacters = confirm('Good choice!');
 
-if (confirmcharacters) {
-  txt = 'Good choice!';
-} else {
-  txt = 'Try again';
-}
+// Prompt for the letters in the password.
 
-// Prompt for the amount of letters in the password.
-
-var userName = prompt('Pick the amount of letters in your password.');
+var userName = prompt(
+  'Pick the letters (lowercase and uppercase) in your password.'
+);
 var confirmletters = confirm('Good choice!');
 
-if (confirmletters == null || password == '') {
-  txt = 'User cancelled the prompt.';
-} else {
-  txt =
-    'Try again' +
-    confirmnumbers +
-    'Please enter the amount of numbers in your new password';
-}
+// Prompt for the numbers in the password.
 
-// Prompt for the amount of letters in the password.
-
-var userName = prompt('Pick the amount of numbers in your password.');
+var userName = prompt('Pick the numbers in your password.');
 var confirmnumbers = confirm('Good choice!');
 
-if (confirmnumbers == null || password == '') {
-  txt = 'User cancelled the prompt.';
-} else {
-  txt =
-    'Try again' +
-    confirmnumbers +
-    'Please enter the amount of numbers in your new password';
-}
+// Prompt for the symbols in the password.
 
-// Prompt for the amount of symbols in the password.
-
-var userName = prompt('Pick the amount of symbols in your new password.');
+var userName = prompt('Pick the symbols in your password.');
 var confirmsymbols = confirm('Good choice!');
-
-if (confirmsymbols == null || password == '') {
-  txt = 'User cancelled the prompt.';
-} else {
-  txt =
-    'Try again' +
-    confirmsymbols +
-    'Enter the amount of symbols in your new password.';
-}
 
 console.log(userName);
 
-// Used geekforgeek to help write this section.
+// Used geekforgeek.com to help write this section.
 
 function generatePassword() {
   var pass = '';
@@ -83,7 +54,7 @@ function generatePassword() {
     'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
     'abcdefghijklmnopqrstuvwxyz0123456789@#$!"#$%&()*+,-.:;<=?@[]^_';
 
-  for (i = 1; i <= 128; i++) {
+  for (i = 8; i <= 128; i++) {
     var char = Math.floor(Math.random() * str.length + 1);
 
     pass += str.charAt(char);
