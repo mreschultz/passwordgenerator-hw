@@ -8,7 +8,7 @@
 
 ## Coding Concepts
 
-- The code includes variables, strings, functions arrays and a for loop.
+- The code includes variables, strings, functions, arrays and a for loop.
 
 ## Acknowledge of coding used from other sources.
 
